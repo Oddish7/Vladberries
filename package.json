@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "parcel": "^2.10.0"
+  },
+  "name": "vladberries",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.10.0",
+    "sass": "^1.69.3"
+  },
+  "scripts": {
+    "start": "parcel serve --open",
+    "build": "parcel build ./src/index.html --public-url ./ --no-source-maps"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
