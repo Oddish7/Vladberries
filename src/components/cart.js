@@ -18,6 +18,12 @@ cartCloseBtn.addEventListener('click', () => {
     cart.classList.remove('cart--open')
     document.body.style.overflow = 'visible'
 })
+cart.addEventListener('click', (e) => {
+    if (!cartContainer.contains(e.target)) {
+        cart.classList.remove('cart--open')
+        document.body.style.overflow = 'visible'
+    }
+})
 
 // Удаление из LS все id (Удаление всех товаров из корзины)
 cartBtnDeleteAll.addEventListener('click', () => {

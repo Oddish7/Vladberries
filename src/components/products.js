@@ -10,6 +10,11 @@ cardsWrapper.addEventListener('click', showProductsPreview)
 productsPreviewCloseBtn.addEventListener('click', () => {
     productsPreview.classList.remove('products-preview--open')
 })
+productsPreview.addEventListener('click', (e) => {
+    if (!productsPreviewWrapper.contains(e.target)) {
+        productsPreview.classList.remove('products-preview--open')
+    }
+})
 
 // Массив данных
 let productsData = []
