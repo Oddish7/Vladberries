@@ -19,7 +19,8 @@ cartCloseBtn.addEventListener('click', () => {
     document.body.style.overflow = 'visible'
 })
 cart.addEventListener('click', (e) => {
-    if (!cartContainer.contains(e.target)) {
+    const delProduct = e.target.closest('.cart__del-card')
+    if (!cartContainer.contains(e.target) && !delProduct) {
         cart.classList.remove('cart--open')
         document.body.style.overflow = 'visible'
     }
