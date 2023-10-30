@@ -1,12 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/styles/styles.scss">
 </head>
+
 <body>
+
+    <header class="header">
+
+        <img class="header__logo" src="./assets/images/header/logo.svg" alt="logo">
+
+        <div class="search-catalog">
+            <input class="search-catalog__input" id="search-input" type="search" name="search" maxlength="300" placeholder="Я ищу...">
+            <button class="search-catalog__btn" id="search-btn" type="submit">
+                <img class="search-catalog__btn-img" src="./assets/images/header/search-btn-wihte.png" alt="search-btn">
+            </button>
+        </div>
+
+        <button class="cart-btn">
+            <img class="cart-btn__img" src="./assets/images/header/cart.png" alt="cart">
+            <span class="cart-btn__quantity">0</span>
+        </button>
+
+    </header>
+
+
+    <main class="main">
+
+        <div class="slider">
+            <div class="slider__line">
+                <img class="slider__img" src="./assets/images/slider/shoes.png" alt="shoes">
+                <img class="slider__img" src="./assets/images/slider//guys.png" alt="guys">
+                <img class="slider__img" src="./assets/images/slider/home.png" alt="home">
+                <img class="slider__img" src="./assets/images/slider/dishes.png" alt="dishes">
+                <img class="slider__img" src="./assets/images/slider/autumn.png" alt="autumn">
+                <img class="slider__img" src="./assets/images/slider/advertising.png" alt="advertising">
+            </div>
+            <button class="slider__btn-prev">
+                <img class="arrow-img" src="./assets/images/slider/left-arrow.svg" alt="left-arrow">
+            </button>
+            <button class="slider__btn-next">
+                <img class="arrow-img" src="./assets/images/slider/right-arrow.svg" alt="right-arrow">
+            </button>
+            <div class="slider__wrapper">
+                <div class="slider__dot active-dot"></div>
+                <div class="slider__dot"></div>
+                <div class="slider__dot"></div>
+                <div class="slider__dot"></div>
+                <div class="slider__dot"></div>
+                <div class="slider__dot"></div>
+            </div>
+        </div>
+
+        <h1 class="main__title">Хиты продаж</h1>
+        <div class="cards-wrapper"></div>
+
+        <div class="products-preview">
+            <div class="products-preview__container">
+                <button class="products-preview__close-btn">✖</button>
+                <div class="products-preview__wrapper"></div>
+            </div>
+        </div>
+            
+        <div class="cart">
+            <div class="cart__container">
+                <div class="cart__item">
+                    <h2 class="cart__main-title">Оформление заказа</h2>
+                </div>
+                <button class="cart__close-btn">✖</button>
+                <div class="cart__products"></div>
+                <p class="cart__alert">Ваша корзина пуста</br>...</p>
+                <div class="cart__bottom">
+                    <p class="cart__total"></p>
+                    <button class="cart__btn-send">Оформить заказ</button>
+                    <button class="cart__btn-delete-all">Очистить корзину</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p class="copyright">2023 © Vladberries</p>
+    </footer>
+
     <script type="module" src="./components/main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,82 @@
+.slider {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 20px;
+    max-width: 1440px;
+    align-self: center;
+}
+
+.slider__line{
+    background-color: rgb(230, 225, 225);
+    display: flex;
+    align-items: center;
+    transition: all 1s;
+}
+
+.slider__img {
+    max-height: 370px;
+}
+
+.slider__btn-prev {
+    position: absolute;
+    left: 1%;
+    top: 40%;
+}
+
+.slider__btn-next {
+    position: absolute;
+    right: 1%;
+    top: 40%;
+}
+
+.slider__wrapper {
+    display: flex;
+    column-gap: 10px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider__dot {
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgb(233, 204, 209);
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(197, 135, 194, 0.432);
+    }
+}
+
+.active-dot {
+    background-color: rgb(197, 135, 194);
+}
+
+.arrow-img {
+    width: 70px;
+}
+
+@media (max-width: 850px) {
+
+    .slider__btn-next img, .slider__btn-prev img {
+        width: calc(20px + (50 - 20) * ((100vw - 320px) / (850 - 320)));
+
+        /* 50 - макс. ширина, которая нам нужна;
+        20, 20px - мин. ширина, которая нам нужна;
+        100vw - полная ширина экрана;
+        320, 320px - мин. разрешение до которого будет уменьш. наше свойство;
+        850 - разрешение экрана, с которого начинает ужиматься наш slider; */
+    }
+
+    .slider__dot {
+        width: calc(10px + (16 - 10) * ((100vw - 320px) / (850 - 320)));
+        height: calc(10px + (16 - 10) * ((100vw - 320px) / (850 - 320)));
+    }
+
+    .slider__wrapper{
+        column-gap: calc(5px + (10 - 5) * ((100vw - 320px) / (850 - 320)));
+    }
+}

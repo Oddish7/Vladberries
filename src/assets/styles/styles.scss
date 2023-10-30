@@ -1,0 +1,26 @@
+// Reset
+@import './reset.scss';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+// Blocks
+@import './blocks/header.scss';
+@import './blocks/slider.scss';
+@import './blocks/main.scss';
+@import './blocks/cart.scss';
+@import './blocks/cards.scss';
+@import './blocks/footer.scss';
+@import './blocks/products.scss';
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+

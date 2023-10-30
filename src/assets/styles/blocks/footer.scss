@@ -1,0 +1,36 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    background-color: #481173;
+    flex-shrink: 0;
+
+    @media (max-width: 420px) {
+        height: 80px;
+    }
+
+    @media (max-width: 320px) {
+        height: 50px;
+    }
+
+    &::before {
+        content: "";
+        display: block;
+        background: #fff;
+        border-radius: 0 0 24px 24px;
+        width: 100%;
+        height: 24px;
+    }
+}
+
+.copyright {
+    text-align: center;
+    color:  rgb(163, 156, 156);
+    font-size: 14px;
+    line-height: 20px;
+
+    @media (max-width: 320px) {
+        font-size: 10px;
+    }
+}

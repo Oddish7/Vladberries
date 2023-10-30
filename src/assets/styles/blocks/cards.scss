@@ -1,0 +1,177 @@
+.cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 225px);
+    width: 100%;
+    max-width: 1000px; 
+    justify-content: center;
+    justify-items: center; 
+    column-gap: 30px;
+    row-gap: 40px; 
+    margin: 60px auto;
+
+    @media (max-width: 850px) {
+        grid-template-columns: repeat(auto-fill, 180px);
+        column-gap: calc(5px + (10 - 5) * ((100vw - 320px) / (850 - 320)));
+        row-gap: 20px; 
+        margin: 40px auto;
+    }
+
+    @media (max-width: 420px) {
+        grid-template-columns: repeat(auto-fill, 100px);
+        row-gap: 10px; 
+        margin: 20px auto;
+    }
+}
+
+.card {
+    width: 225px;
+    min-height: 350px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    transition: 0.2s;
+    position: relative;
+
+    &:hover {
+        box-shadow: 4px 8px 16px rgba(185, 35, 199, 0.2);
+    }
+
+    @media (max-width: 850px) {
+        width: 180px;
+        min-height: 270px;
+    }
+
+    @media (max-width: 420px) {
+        width: 100px;
+        min-height: 150px;
+    }
+}
+
+.card__top {
+	flex: 0 0 220px;
+	position: relative;
+	overflow: hidden;
+    cursor: pointer;
+
+    @media (max-width: 850px) {
+        flex: 0 0 180px;
+    }
+
+    @media (max-width: 420px) {
+        flex: 0 0 100px;
+    }
+}
+
+.card__image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.card__image > img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	transition: 0.2s;
+}
+
+.card__image:hover > img {
+	transform: scale(1.1);
+}
+
+.card__bottom {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    padding: 10px;
+}
+
+.card__prices {
+    display: flex;
+    margin-bottom: 10px;
+    flex: 0 0 50%;
+}
+
+.card__price::after {
+    content: "$";
+    margin-left: 4px;
+    position: relative;
+}
+
+.card__price--size {
+    font-size: 25px;
+
+    @media (max-width: 850px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 420px) {
+        font-size: 15px;
+    }
+}
+
+.card__title {
+    display: block;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    line-height: 130%;
+    color: #444040;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media (max-width: 850px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 420px) {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 10px;
+    }
+}
+
+.card__add {
+    display: block;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    color: #cb11ab;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #cb11ab;
+    border-radius: 4px;
+    cursor: pointer; 
+    transition: 0.2s;
+    margin-top: auto;
+
+    &.active {
+        background-color: #cb11ab;
+        color: #fff;
+    }
+
+    &:hover {
+        background-color: #cb11ab;
+        color: #fff;
+    }
+
+    @media (max-width: 850px) {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 420px) {
+        padding: 5px;
+        font-size: 10px;
+    }
+}
+
+.hide {
+    display: none;
+}

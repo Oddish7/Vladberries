@@ -1,0 +1,353 @@
+.cart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.33); 
+    z-index: 1000; 
+    width: 100%;
+    height: 100%;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.cart__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+
+    @media (max-width: 850px) {
+        max-width: 400px;
+    }
+
+    @media (max-width: 420px) {
+        max-width: 300px;
+    }
+}
+
+.cart__close-btn {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    padding: 17px 20px;
+    color: rgba(54, 67, 100, 0.7);
+    font-size: 20px;
+
+    @media (max-width: 420px) {
+        padding: 10px 13px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 200px) {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    &:hover {
+        color: rgb(54, 67, 100);
+    }
+}
+
+.cart__item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+
+.cart__main-title {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+
+    @media (max-width: 850px) {
+        font-size: 17px;
+    }
+
+    @media (max-width: 420px) {
+        font-size: 13px;
+    }
+
+    @media (max-width: 200px) {
+        font-size: 10px;
+    }
+}
+
+.cart--open {
+    display: flex;
+}
+
+.cart__products{
+    display: flex;
+    max-height: 500px;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+
+    @media (max-width: 850px) {
+        max-height: 400px;
+    }
+
+    @media (max-width: 420px) {
+        max-height: 300px;
+    }
+}
+
+.cart__product {
+    padding: 15px 10px 15px 10px;
+    display: flex;
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+    box-shadow: 1px 2px 4px #0000001a;
+
+    @media (max-width: 850px) {
+        max-width: 700px;
+    }
+}
+
+.cart__del-card{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+    color: #cb11ac94;
+
+    @media (max-width: 850px) {
+        top: 7px;
+        right: 7px;
+    }
+
+    @media (max-width: 420px) {
+        top: 5px;
+        right: 5px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 200px) {
+        top: 4px;
+        right: 4px;
+        font-size: 12px;
+    }
+
+    &:hover {
+        color: #cb11ac;
+    }
+}
+
+.cart__img {
+    flex: 0 0 120px;
+
+    @media (max-width: 850px) {
+        flex: 0 0 90px;
+    }
+
+    @media (max-width: 420px) {
+        flex: 0 0 60px;
+    }
+
+    @media (max-width: 200px) {
+        flex: 0 0 50px;
+    }
+
+    & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}
+
+.cart__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 340px;
+    margin-left: 25px;
+
+    @media (max-width: 850px) {
+        width: 180px;
+        margin-left: 10px;
+    }
+
+    @media (max-width: 420px) {
+        margin-left: 5px;
+    }
+}
+
+.cart__title{
+    font-family: 'Raleway', sans-serif;
+    color: #444040;;
+    font-size: 18px;
+    text-align: center;
+
+    @media (max-width: 850px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 420px) {
+        font-size: 10px;
+    }
+}
+
+.cart__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 25px;
+
+    @media (max-width: 850px) {
+        font-size: 20px;
+    }
+
+    @media (max-width: 420px) {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+.cart__bottom {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    border-top: 1px solid #ddd;
+
+    @media (max-width: 850px) {
+        gap: 10px;
+    }
+
+    @media (max-width: 420px) {
+        gap: 5px;
+    }
+
+    @media (max-width: 260px) {
+        gap: 1;
+    }
+}
+
+.cart__btn-send {
+    display: block;
+    width: 200px;
+    margin: 20px 0 20px 0;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    color: #cb11ab;
+    text-align: center;
+    border: 1px solid #cb11ab;
+    border-radius: 4px;
+    cursor: pointer; 
+    transition: 0.2s;
+
+    @media (max-width: 850px) {
+        width: 150px;
+        font-size: 14px;
+    }
+
+    @media (max-width: 420px) {
+        width: 100px;
+        font-size: 11px;
+        margin: 10px 0 10px 0;
+        padding: 5px;
+    }
+
+    @media (max-width: 200px) {
+        width: 80px;
+        font-size: 9px;
+        padding: 3px;
+    }
+
+    &:hover {
+        background-color: #cb11ab;
+        color: #fff;
+    }
+}
+
+.cart__total {
+    text-align: center;
+    font-size: 20px;
+    width: 150px;
+
+    @media (max-width: 850px) {
+        width: 100px;
+        font-size: 16px;
+    }
+
+    @media (max-width: 420px) {
+        width: 80px;
+        font-size: 13px;
+    }
+
+    @media (max-width: 200px) {
+        font-size: 12px;
+    }
+
+    & > span {
+        font-family: 'Raleway', sans-serif;
+    }
+}
+
+.cart__btn-delete-all {
+    display: block;
+    width: 100px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+
+    @media (max-width: 850px) {
+        font-size: 14px;
+    }
+
+    @media (max-width: 420px) {
+        width: 80px;
+        font-size: 11px;
+    }
+
+    @media (max-width: 200px) {
+        font-size: 10px;
+    }
+
+    &:hover {
+        color: rgb(206, 21, 21);
+    }
+}
+
+.cart__alert {
+    display: none;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    color: #444040;
+
+    @media (max-width: 850px) {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        font-size: 25px;
+    }
+
+    @media (max-width: 420px) {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        font-size: 20px;
+    }
+
+    @media (max-width: 200px) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 17px;
+    }
+}
