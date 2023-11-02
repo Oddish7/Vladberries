@@ -1,7 +1,7 @@
 "use strict"
 
 import { showErrorMessage } from './utils.js'
-import { ERROR_SERVER, productsPreviewWrapper, cardsWrapper, productsPreview, productsPreviewCloseBtn } from './varibles'
+import { ERROR_SERVER, productsPreviewWrapper, cardsWrapper, productsPreview, productsPreviewCloseBtn } from './variables'
 
 // Обработка клика по товару
 cardsWrapper.addEventListener('click', showProductsPreview)

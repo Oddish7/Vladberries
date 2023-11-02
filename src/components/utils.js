@@ -1,6 +1,6 @@
 "use strict"
 
-import { cardsWrapper} from './varibles'
+import { cardsWrapper} from './variables'
 import { checkingActiveButtons } from './cart'
 
 //Вывод ошибки

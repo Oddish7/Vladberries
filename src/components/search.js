@@ -1,6 +1,6 @@
 "use strict"
 
-import { searchInput } from './varibles'
+import { searchInput } from './variables'
 
 // Поиск товаров
 searchInput.addEventListener('input', () => {

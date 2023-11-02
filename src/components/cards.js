@@ -1,7 +1,7 @@
 "use strict"
 
 import { showErrorMessage, checkAll} from './utils'
-import { ERROR_SERVER, cardsWrapper } from './varibles'
+import { ERROR_SERVER, cardsWrapper } from './variables'
 
 // Массив данных
 let productsData = []

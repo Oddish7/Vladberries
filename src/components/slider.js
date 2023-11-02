@@ -1,6 +1,6 @@
 "use strict"
 
-import { sliderImages, sliderLine, sliderDots, sliderBtnNext, sliderBtnPrev } from './varibles'
+import { sliderImages, sliderLine, sliderDots, sliderBtnNext, sliderBtnPrev } from './variables'
 
 // Переменные
 let sliderCount = 0,

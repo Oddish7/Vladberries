@@ -1,7 +1,7 @@
 "use strict"
 
 import { showErrorMessage, setCartLocalStorage, getCartLocalStorage, checkAll } from './utils.js'
-import { cart, cartProducts, cartBtn, cartCloseBtn, cartBtnSend, cartAlert, cartContainer, cartBottom, cartBtnDeleteAll, cartTotal, ERROR_SERVER, cardsWrapper } from './varibles.js'
+import { cart, cartProducts, cartBtn, cartCloseBtn, cartBtnSend, cartAlert, cartContainer, cartBottom, cartBtnDeleteAll, cartTotal, ERROR_SERVER, cardsWrapper } from './variables.js'
 
 // Обработка клика по кнопке "Удалить из корзины"
 cartProducts.addEventListener('click', delProductCart)
